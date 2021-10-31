@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resposive Text</title>
+</head>
+<style>
+  body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: gray;
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+      }
+  
+      h1 {
+        display: none;
+      }
+  
+      /* Smartphones */
+      @media only screen and (max-width: 500px) {
+        body {
+          background: red;
+        }
+  
+        #smartphone h1 {
+          display: block;
+        }
+      }
+  
+      /* Tablet */
+      @media(min-width: 501px) and (max-width: 768px) {
+        body {
+          background: blue;
+        }
+  
+        #tablet h1 {
+          display: block;
+        }
+      }
+  
+      /* Normal */
+      @media(min-width: 769px) and (max-width: 1200px) {
+        body {
+          background: green;
+        }
+  
+        #normal h1 {
+          display: block;
+        }
+      }
+  
+      /* Widescreen */
+      @media(min-width: 1201px) {
+        body {
+          background: black;
+        }
+  
+        #widescreen h1 {
+          display: block;
+        }
+      }
+  
+      /* Landscape */
+      @media(max-height: 500px) {
+        body {
+          background: orange;
+        }
+  
+        #landscape h1 {
+          display: block;
+        }
+        
+      }
+    </style>
+<body>
+  <div id="widescreen" style="font-size: 40px;"><h1>I</h1></div>
+  <div id="normal" style="font-size: 35px;"><h1>Will</h1></div>
+  <div id="tablet" style="font-size: 30px;"><h1>Walk</h1></div>
+  <div id="smartphone" style="font-size: 25px;"><h1>Thousand</h1></div>
+  <div id="landscape" style="font-size: 20px;"><h1>Miles</h1></div>
+</body>
+</html>
