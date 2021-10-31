@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disappearance</title>
+</head>
+
+<style>
+  p {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  div {
+    float: left;
+    width: 280px;
+    padding: 10px;
+    border: 1px solid green;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+
+    .main {
+      border: none;
+    }
+
+    .main p {
+      width: 100vw;
+      font-size: 40px;
+    }
+  }
+</style>
+
+<body>
+  <div class="main">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel id quo quasi nostrum perferendis. Eaque illum
+      magni modi pariatur rem dicta aperiam alias repellendus. Delectus aspernatur ipsum incidunt. Temporibus.</p>
+  </div>
+
+  <div class="sidebar">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius harum expedita magni reprehenderit, repellendus
+      fugit vero necessitatibus itaque est praesentium hic voluptas distinctio dolore deserunt esse ducimus non
+      recusandae cumque.</p>
+  </div>
+</body>
+
+</html>
