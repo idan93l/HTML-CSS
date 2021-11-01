@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Border</title>
+</head>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  h2 {
+    display: flex;
+    text-align: center;
+    position: absolute;
+  }
+
+  .border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 70px;
+    color: salmon;
+    border: 2px solid salmon;
+    position: relative;
+  }
+
+  .border::after {
+    left: 10%;
+    content: '';
+    background: black;
+    width: 80%;
+    height: 110%;
+    position: absolute;
+  }
+
+  .border::before {
+    content: '';
+    background: black;
+    width: 105%;
+    height: 60%;
+    position: absolute;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="border"></div>
+    <h2 style="color: white;">Cool Border</h2>
+  </div>
+</body>
+
+</html>
