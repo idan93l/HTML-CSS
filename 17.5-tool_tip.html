@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool tip</title>
+</head>
+<style>
+  .tooltip {
+    position: relative;
+  }
+
+
+  .tooltip:hover:after {
+    background: rgba(251, 255, 0, 0.904);
+    border-radius: 100px;
+    bottom: 1.45em;
+    color: black;
+    content: attr(tp-data);
+    display: block;
+    left: 1em;
+    padding: .3em 1em;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+
+  .tooltip:hover:before {
+    border: solid;
+    border-color: yellow;
+    border-color: yellow transparent;
+    border-width: .4em .4em 0 .4em;
+    bottom: 0.78em;
+    content: "";
+    left: 0.84em;
+    position: absolute;
+  }
+</style>
+
+<body>
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, explicabo! Itaque sit voluptate distinctio
+      illum, veritatis nemo optio impedit maiores natus pariatur ratione iusto vitae, quos vero numquam aliquam suscipit
+      exercitationem fugit beatae commodi repellendus? Dolorum, sequi. Iusto itaque possimus facere doloremque,
+      laboriosam officia obcaecati. Atque sequi voluptatibus deserunt sapiente quibusdam, eaque iste, ea vitae quos
+      numquam <a href="#" class="tooltip" tp-data="The Spice">maxime</a> harum sunt quia! Velit exercitationem in harum
+      doloribus, culpa magnam voluptatibus dignissimos
+      sunt, quos placeat vel ratione voluptate veritatis sint amet, at ea ipsam itaque. Quasi at quibusdam maxime odio
+      ipsum velit itaque fugiat accusamus cum perspiciatis? Minima ea repellat consequatur autem?</p>
+  </div>
+</body>
+
+</html>
