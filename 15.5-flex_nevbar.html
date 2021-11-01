@@ -19,18 +19,17 @@
   }
 
   .item {
+    align-self: center;
     text-align: center;
     width: 120px;
   }
 
   .item1 {
-    display: flex;
-    padding-left: 20px;
-    flex: 1;
+    width: 165px;
   }
 
-  .item2 {
-    padding-top: 8px;
+  .place {
+    flex-grow: 1;
   }
 
   @media (max-width: 500px) {
@@ -38,16 +37,12 @@
       flex-direction: column;
     }
 
-    .item {
-      align-self: center;
-    }
-
-    .item1 {
-      padding-left: 0px;
-    }
-
     .item2 {
       font-size: 20px;
+    }
+
+    .place {
+      display: none;
     }
 
   }
@@ -58,6 +53,7 @@
     <div class="item item1">
       <h2>Appleseeds</h2>
     </div>
+    <div class="item place"></div>
     <div class="item item2">
       <p>home</p>
     </div>
