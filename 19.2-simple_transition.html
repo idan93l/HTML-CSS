@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Transition</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vh;
+    background: white;
+  }
+
+  div {
+    height: 400px;
+    width: 400px;
+    background: red;
+    position: relative;
+    transform: translateX(200px);
+  }
+
+  div::after {
+    content: '';
+    background: purple;
+    height: 100%;
+    width: 400px;
+    left: -400px;
+    top: 0;
+    position: absolute;
+    transition: all 0.6s ease-in-out;
+  }
+
+  div:hover::after {
+    background: green;
+    transform: translateX(400px);
+  }
+</style>
+
+<body>
+  <div></div>
+</body>
+
+</html>
