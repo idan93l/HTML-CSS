@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    font-size: 30px;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: #333;
+  }
+
+  header {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .container {
+    text-align: center;
+    max-width: max-content;
+    margin: auto;
+  }
+
+  .btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin: auto 10px;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+
+  .clr {
+    font-size: x-large;
+    background: rgb(253, 35, 36);
+  }
+
+  .sub {
+    font-size: large;
+    background: rgb(11, 142, 224);
+  }
+
+  .reg {
+    background: rgb(1, 221, 119);
+  }
+
+  .reg:hover {
+    background: rgb(3, 170, 92);
+  }
+
+  .clr:hover {
+    background: rgb(151, 22, 22);
+  }
+
+  .sub:hover {
+    background: rgb(9, 114, 179);
+  }
+
+  .round {
+    border-radius: 100px;
+  }
+
+  .round.reg {
+    background: rgb(245, 121, 0);
+  }
+
+  .round.reg:hover {
+    background: rgb(168, 87, 5);
+
+  }
+
+  .round.clr {
+    background: rgb(245, 205, 2);
+  }
+
+  .round.clr:hover {
+    background: rgb(185, 155, 3);
+
+  }
+
+  .round.sub {
+    background: rgb(126, 140, 143);
+  }
+
+  .round.sub:hover {
+    background: rgb(82, 88, 90);
+
+  }
+
+  .ghost.square {
+    background: transparent;
+  }
+
+  .ghost.round {
+    background: transparent;
+  }
+
+  .ghost.round.reg {
+    border: rgb(245, 121, 0) solid;
+  }
+
+  .ghost.round.reg:hover {
+    background: rgb(245, 121, 0);
+  }
+
+  .ghost.round.clr {
+    border: rgb(245, 205, 2) solid;
+  }
+
+  .ghost.round.clr:hover {
+    background: rgb(245, 205, 2);
+  }
+
+  .ghost.round.sub {
+    border: rgb(126, 140, 143) solid;
+  }
+
+  .ghost.round.sub:hover {
+    background: rgb(126, 140, 143);
+  }
+
+  .ghost.square.reg {
+    border: rgb(1, 221, 119) solid;
+  }
+
+  .ghost.square.reg:hover {
+    background: rgb(1, 221, 119);
+  }
+
+  .ghost.square.clr {
+    border: rgb(253, 35, 36) solid;
+  }
+
+  .ghost.square.clr:hover {
+    background: rgb(253, 35, 36);
+  }
+
+  .ghost.square.sub {
+    border: rgb(11, 142, 224) solid;
+  }
+
+  .ghost.square.sub:hover {
+    background: rgb(11, 142, 224);
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="line1">
+      <header>Flat</header>
+      <button class="btn square reg">Register</button>
+      <button class="btn square clr">clear</button>
+      <button class="btn square sub">Submit</button>
+    </div>
+
+    <div class="line2">
+      <header>Round</header>
+      <button class="btn round reg">Register</button>
+      <button class="btn round clr">clear</button>
+      <button class="btn round sub">Submit</button>
+    </div>
+
+    <div class="line3">
+      <header>Flat Ghost</header>
+      <button class="btn ghost square reg">Register</button>
+      <button class="btn ghost square clr">clear</button>
+      <button class="btn ghost square sub">Submit</button>
+    </div>
+
+    <div class="line4">
+      <header>Round Ghost</header>
+      <button class="btn ghost round reg">Register</button>
+      <button class="btn ghost round clr">clear</button>
+      <button class="btn ghost round sub">Submit</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
