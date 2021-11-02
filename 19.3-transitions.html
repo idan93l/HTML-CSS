@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transitions</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    align-items: column;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vh;
+    background: white;
+    font-size: 30px;
+  }
+
+  div {
+    align-self: center;
+    border: 3px solid black;
+    padding: 20px;
+    margin: 60px;
+    overflow: hidden;
+  }
+
+  .try {
+    position: relative;
+  }
+
+  .try::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'Yeah!';
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    position: absolute;
+    transition: 0.6s;
+  }
+
+  .try:hover::after {
+    background: red;
+    transform: translateY(100%);
+  }
+  
+  .translate {
+    position: relative;
+    transition: 0.6s;
+  }
+
+  .translate:hover {
+    color: white;
+  }
+
+
+  .translate::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '';
+    height: 100%;
+    width: 101%;
+    top: 0;
+    left: -101%;
+    position: absolute;
+    transition: 0.6s;
+    z-index: -1;
+  }
+
+  .translate:hover::after {
+    background: black;
+    transform: translateX(100%);
+  }
+
+  .rotate {
+    position: relative;
+  }
+
+
+  .rotate::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    transition: 0.6s;
+    z-index: -20;
+    
+  }
+
+  .rotate:hover::after {
+    background: yellow;
+    transform: rotate(0deg);
+  }
+
+  .scop {
+    position: relative;
+  }
+
+  .scop::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'Scale & Opacity';
+    color: white;
+    background: black;
+    opacity: 100%;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: scale(300%);
+    transition: 0.6s;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  .scop:hover::after {
+    transform: scale(100%);
+    opacity: 1;
+    z-index: 1;
+  }
+
+</style>
+
+<body>
+  <div class="try">Translate Y</div>
+  <div class="translate"><span>Translate</span></div>
+  <div class="rotate">Rotate</div>
+  <div class="scop">Scale & Opacity</div>
+</body>
+
+</html>
