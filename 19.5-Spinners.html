@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spinners</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    color: white;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .first {
+    height: 200px;
+    width: 200px;
+    border: 25px solid rgb(71, 71, 71);
+    border-top: 25px solid rgb(255, 0, 179);
+    border-radius: 50%;
+    margin: 30px;
+    animation: spin1 1s linear infinite;
+  }
+
+  @keyframes spin1 {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .second {
+    height: 200px;
+    width: 200px;
+    border-top: 10px solid rgb(255, 0, 179);
+    border-right: 10px solid transparent;
+    border-radius: 50%;
+    margin: 30px;
+    animation: spin2 1s linear infinite;
+  }
+
+
+  @keyframes spin2 {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .third {
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    width: 200px;
+  }
+
+  .dot-1,.dot-2,.dot-3 {
+    height: 30px;
+    width: 30px;
+    background: rgb(255, 0, 179);
+    border-radius: 50%;
+    animation: color 1s alternate infinite;
+  }
+
+  .dot-2 {
+    animation-delay: 0.5s;
+  }
+
+  .dot-3 {
+    animation-delay: 0.75s;
+  }
+
+  @keyframes color {
+    to {
+      background: rgb(195, 195, 195);
+    }
+  }
+
+  .fourth {
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    width: 200px;
+  }
+
+  .ball-1,.ball-2,.ball-3 {
+    height: 30px;
+    width: 30px;
+    background: rgb(255, 0, 179);
+    border-radius: 50%;
+    animation: jump 5s infinite;
+  }
+
+  .ball-2 {
+    animation-delay: 1s;
+  }
+
+  .ball-3 {
+    animation-delay: 2s;
+  }
+
+  @keyframes jump {
+    0% {
+      transform: initial;
+    }
+
+    30% {
+      transform: translateY(-30px);
+    }
+
+    60% {
+      transform: initial;
+    }
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third">
+      <div class="dot-1"></div>
+      <div class="dot-2"></div>
+      <div class="dot-3"></div>
+    </div>
+    <div class="fourth">
+      <div class="ball-1"></div>
+      <div class="ball-2"></div>
+      <div class="ball-3"></div>
+    </div>
+  </div>
+</body>
+
+</html>
