@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Basics</title>
+</head>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-areas:
+      'box1 box1 box1 box1'
+      'box2 box3 box3 box4'
+      'box5 box5 box5 box5';
+    grid-gap: 1rem;
+  }
+
+  .box1 {
+    background-color: salmon;
+    grid-area: box1;
+  }
+
+  .box2 {
+    background: rgb(151, 199, 238);
+    grid-area: box2;
+  }
+
+  .box3 {
+    background: rgb(8, 182, 130);
+    grid-area: box3;
+  }
+
+  .box4 {
+    background: rgb(190, 17, 138);
+    grid-area: box4;
+  }
+
+  .box5 {
+    background: rgb(255, 221, 129);
+    grid-area: box5;
+  }
+
+  .container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  @media(max-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-areas:
+        'box1 box1 box1 box1'
+        'box2 box3 box3 box3'
+        'box4 box4 box4 box4'
+        'box5 box5 box5 box5';
+    }
+  }
+
+    @media(max-width: 500px) {
+      .container {
+        display: grid;
+        grid-template-areas:
+          'box1'
+          'box2'
+          'box3'
+          'box4'
+          'box5';
+      }
+    }
+</style>
+
+<body>
+  <div class="container">
+    <div class="box1">
+      <h3>Head</h3>
+    </div>
+    <div class="box2">
+      <h3>Sidebar</h3>
+    </div>
+    <div class="box3">
+      <h3>
+        Content <br>
+        more content than we had before <br>
+        so this content is now quite tall</h3>
+    </div>
+    <div class="box4">
+      <h3>Sidebar 2</h3>
+    </div>
+    <div class="box5">
+      <h3>Footer</h3>
+    </div>
+  </div>
+</body>
+</html>
